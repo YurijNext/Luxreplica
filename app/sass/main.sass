@@ -1,0 +1,58 @@
+
+@import "vars"
+@import "fonts"
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html
+	font-size: 13px
+	line-height: 20px
+
+body
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text-color
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.container
+  max-width: 1200px
+  padding: 0 15px
+  margin: 0 auto
+
+.flex-container--row
+	display: flex
+	flex-direction: row
+
+.flex-container--column
+	display: flex
+	flex-direction: column
+
+
+@import _global/_header.sass

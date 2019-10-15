@@ -1,0 +1,180 @@
+/* 1.1 Header */
+
+/* 1.1.1 Header top */
+.header__top
+  width: 100%
+  height: 40px
+  background-color: $dark
+  color: #C2C2C2
+  .flex-container--row
+    justify-content: space-between
+    height: 40px
+    width: 100%
+
+.header__feedback
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.feedback__title
+  font-family: $default-bold
+  font-size: 1.08rem
+  text-transform: uppercase
+
+.header
+  .feedback__socials
+    display: flex
+    height: 100%
+    align-items: center
+    margin: 0
+    padding: 0
+    list-style-type: none
+    margin-left: 16px
+
+.feedback__link
+  padding: 0 9px
+
+.feedback__whatsapp, .feedback__telegram, .feedback__viber:hover
+  svg
+    path
+      transition: all .3s ease-in-out
+
+.feedback__whatsapp:hover
+  svg
+    path
+      fill: #fff
+
+
+.feedback__telegram:hover
+  svg
+    path
+      stroke: #fff
+
+.feedback__viber:hover
+  svg
+    path
+      fill: #fff
+
+.header__call
+  display: flex
+  align-items: center
+  .call__phone
+    font-family: $default-bold
+    font-size: 1.08rem
+    text-transform: uppercase
+    color: #C2C2C2
+    transition: color .3s ease-in-out
+    text-decoration: none
+    margin-right: 18px
+    &:hover
+      color: #fff
+
+.call__callback
+    font-family: $default-bold
+    font-size: 1.08rem
+    text-transform: uppercase
+    color: #C2C2C2
+    background: none
+    border: none
+    padding: 0
+    border-bottom: 2px solid
+    border-color: #C2C2C2
+    transition: all .3s ease-in-out
+    cursor: pointer
+    &:hover
+      color: #fff
+      border-color: #fff
+
+/* 1.1.1  END Header top */
+
+/* 1.1.2 Header bottom */
+
+.header__bottom
+  padding: 34px 0 40px 0
+  .flex-container--row
+    align-items: center
+    justify-content: space-between
+
+.header__menu
+  display: flex
+  flex-direction: row
+
+.menu__item
+  font-size: 13px
+  padding: 0 15px
+  font-family: $default-bold
+  text-transform: uppercase
+  cursor: pointer
+
+.menu__link
+  display: block
+  position: relative
+  color: $text-color
+  font-size: 13px
+  font-family: $default-bold
+  text-transform: uppercase
+  text-decoration: none
+  padding-bottom: 6px
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 2px
+    background-color: $dark
+    opacity: 0
+    transition: all .3s ease-in-out
+  &:hover::after
+    opacity: 1
+    left: 3px
+
+.menu__dropdown
+  display: none
+
+.user-actions__search
+  width: 24px
+  height: 22px
+  background: none
+  border: none
+
+.user-actions__bag
+  width: 24px
+  height: 22px
+  background: none
+  border: none
+
+/* 1.1.2 END Header bottom */
+
+/* 1.1 END Header */
+
+/* 1.1 Header media */
+
+@media only screen and (max-width: 640px)
+  .feedback__title
+    display: none
+
+  .header .feedback__socials
+    margin-left: 0
+
+  .feedback__whatsapp
+    padding-left: 0
+
+  .header, .header__top,
+    height: 70px
+
+  .header__top .flex-container--row
+    height: 70px
+
+  .header__call
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  .header__call .call__phone
+    margin-right: 0
+
+
+
+/* 1.1 END Header media */
